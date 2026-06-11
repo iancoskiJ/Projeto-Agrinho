@@ -1,0 +1,444 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --fundo-escuro: #0a0f0d;      /* Preto profundo com toque verde */
+    --verde-escuro: #1b3a24;      /* Verde floresta elegante */
+    --verde-claro: #2e6f40;       /* Verde destaque */
+    --texto-claro: #f4f6f4;       /* Branco off-white para fundo escuro */
+    --jornal-fundo: #ffffff;      /* Branco puro para as páginas de jornal */
+    --jornal-texto: #111111;      /* Preto suave para leitura de jornal */
+    --fonte-titulo: 'Playfair Display', serif; /* Fonte clássica de jornal */
+    --fonte-corpo: 'Poppins', sans-serif;       /* Fonte moderna e limpa */
+    --transicao-suave: all 0.4s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   CABECALHO (HEADER & NAVBAR)
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 15, 13, 0.95);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 2px solid var(--verde-escuro);
+    transition: var(--transicao-suave);
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--texto-claro);
+}
+
+.logo i {
+    color: var(--verde-claro);
+}
+
+.logo span {
+    color: var(--verde-claro);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+    transition: var(--transicao-suave);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--verde-claro);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--texto-claro);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION (COM FUNDO DE MÁQUINAS AGRÍCOLAS)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    /* Imagem conceitual e profissional de maquinário agrícola no campo */
+    background: url('https://images.unsplash.com/photo-1592997572594-34be01bc36c7?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Camada escura por cima da foto para dar elegância e leitura ao texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10,15,13,0.8), rgba(10,15,13,0.95));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-subtitle {
+    color: var(--verde-claro);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero-title {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--verde-escuro);
+    color: var(--texto-claro);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid var(--verde-claro);
+    transition: var(--transicao-suave);
+}
+
+.btn-principal:hover {
+    background-color: var(--verde-claro);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   ESTILO JORNAL (NOTÍCIAS EM BRANCO E PRETO)
+   ========================================================================== */
+.jornal-section {
+    padding: 100px 0;
+    background-color: var(--fundo-escuro);
+}
+
+.jornal-header {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 3px double var(--verde-escuro);
+    padding-bottom: 20px;
+}
+
+.jornal-header h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--texto-claro);
+}
+
+.jornal-data {
+    font-family: var(--fonte-titulo);
+    font-style: italic;
+    color: var(--verde-claro);
+}
+
+/* Grid do Jornal */
+.jornal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* O "Papel" de Jornal: Fundo branco, texto preto */
+.jornal-card {
+    background-color: var(--jornal-fundo);
+    color: var(--jornal-texto);
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transicao-suave);
+    border: 1px solid #ddd;
+}
+
+.jornal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(46, 111, 64, 0.3);
+}
+
+/* Notícia de Destaque ocupa duas colunas */
+.jornal-card.destaque {
+    grid-column: span 2;
+    border-left: 5px solid var(--verde-escuro);
+}
+
+.categoria {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--verde-claro);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.jornal-card h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.jornal-card.destaque h3 {
+    font-size: 2.3rem;
+}
+
+.autor {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.previa {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-ler-mais {
+    background: none;
+    border: none;
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--jornal-texto);
+    cursor: pointer;
+    text-align: left;
+    padding: 5px 0;
+    border-bottom: 2px solid var(--verde-escuro);
+    width: fit-content;
+    transition: var(--transicao-suave);
+}
+
+.btn-ler-mais:hover {
+    color: var(--verde-claro);
+    border-bottom-color: var(--verde-claro);
+    padding-left: 5px;
+}
+
+/* ==========================================================================
+   SEÇÃO IMPACTO (NÚMEROS ANIMADOS)
+   ========================================================================== */
+.impacto-section {
+    background: linear-gradient(rgba(27, 58, 36, 0.2), rgba(10, 15, 13, 0.9)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.secao-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.contadores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.contador-card {
+    background-color: rgba(10, 15, 13, 0.85);
+    padding: 40px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--verde-escuro);
+    transition: var(--transicao-suave);
+}
+
+.contador-card:hover {
+    border-color: var(--verde-claro);
+}
+
+.contador-card i {
+    font-size: 2.5rem;
+    color: var(--verde-claro);
+    margin-bottom: 15px;
+}
+
+.contador-card h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+.footer {
+    background-color: #050807;
+    padding: 50px 0 20px 0;
+    border-top: 1px solid var(--verde-escuro);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-info h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.footer-info span {
+    color: var(--verde-claro);
+}
+
+.footer-redes a {
+    color: var(--texto-claro);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: var(--transicao-suave);
+}
+
+.footer-redes a:hover {
+    color: var(--verde-claro);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE SCROLL (CSS CLASSE BASE)
+   ========================================================================== */
+.animar-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animar-scroll.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .jornal-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna no celular/tablet */
+    }
+    
+    .jornal-card.destaque {
+        grid-column: span 1; /* Ocupa espaço normal */
+    }
+
+    .contadores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Ativa botão hambúrguer */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background-color: var(--fundo-escuro);
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 20px;
+        border-bottom: 2px solid var(--verde-escuro);
+        transition: var(--transicao-suave);
+    }
+
+    /* Classe ativada por JS no Mobile */
+    .nav-links.ativo {
+        left: 0;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-redes a {
+        margin: 0 10px;
+    }
+}

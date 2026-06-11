@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampo | O Jornal da Agricultura Familiar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i> Eco<span>Campo</span>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#impacto">O Impacto</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Agro Forte, Futuro Sustentável</p>
+            <h1 class="hero-title">A Força da Agricultura Familiar</h1>
+            <p class="hero-description">Alimentando o país, preservando o meio ambiente e construindo o amanhã tecnológica e tradicionalmente.</p>
+            <a href="#noticias" class="btn-principal">Leia o Jornal <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <main id="noticias" class="jornal-section">
+        <div class="container">
+            <div class="jornal-header">
+                <h2>Gazeta do Campo</h2>
+                <p class="jornal-data">Edição Especial • Atualizado em Tempo Real</p>
+            </div>
+
+            <div class="jornal-grid">
+                
+                <article class="jornal-card destaque animar-scroll">
+                    <span class="categoria">Manchete do Dia</span>
+                    <h3>Tecnologia no Campo: Pequenos Produtores Lideram a Revolução Verde</h3>
+                    <p class="autor">Por Redação EcoCampo | 10 Min atrás</p>
+                    <p class="previa">A agricultura familiar não se baseia mais apenas no passado. Hoje, o uso de drones e sistemas de irrigação automatizados de baixo custo está transformando pequenas propriedades em potências sustentáveis, garantindo alimentos saudáveis sem agredir o solo.</p>
+                    <button class="btn-ler-mais">Ler matéria completa</button>
+                </article>
+
+                <article class="jornal-card animar-scroll">
+                    <span class="categoria">Sustentabilidade</span>
+                    <h3>O que é Agroecologia e por que ela importa para você?</h3>
+                    <p class="autor">Por Silva, J. | Hoje</p>
+                    <p class="previa">Entenda como a rotação de culturas e a eliminação de defensivos químicos pesados protegem as bacias hidrográficas locais e trazem mais saúde para a mesa dos brasileiros.</p>
+                    <button class="btn-ler-mais">Ler matéria completa</button>
+                </article>
+
+                <article class="jornal-card animar-scroll">
+                    <span class="categoria">Economia</span>
+                    <h3>70% dos Alimentos na Mesa dos Brasileiros vêm de Pequenas Famílias</h3>
+                    <p class="autor">Por Costa, M. | Ontem</p>
+                    <p class="previa">Dados recentes confirmam que a segurança alimentar do país depende diretamente do pequeno agricultor. O fortalecimento de cooperativas impulsiona a economia interna de centenas de municípios.</p>
+                    <button class="btn-ler-mais">Ler matéria completa</button>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <section id="impacto" class="impacto-section">
+        <div class="container">
+            <h2 class="secao-titulo">O Impacto em Números</h2>
+            <div class="contadores-grid">
+                <div class="contador-card">
+                    <i class="fa-solid fa-tractor"></i>
+                    <h3 class="contador" data-alvo="70">0</h3>
+                    <p>% dos alimentos consumidos no Brasil</p>
+                </div>
+                <div class="contador-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3 class="contador" data-alvo="10">0</h3>
+                    <p>Milhões de empregos gerados no campo</p>
+                </div>
+                <div class="contador-card">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <h3 class="contador" data-alvo="84">0</h3>
+                    <p>% dos estabelecimentos rurais do país</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="sobre" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Eco<span>Campo</span></h3>
+                <p>Promovendo o futuro da agricultura sustentável e valorizando quem trabalha na terra.</p>
+            </div>
+            <div class="footer-redes">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EcoCampo - Agro Forte, Futuro Sustentável. Desenvolvido para fins Educacionais.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
